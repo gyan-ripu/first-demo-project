@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+    
     stages {
         stage('Git Checkout') {
             steps {
@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Maven Build') {
             steps {
-                git credentialsId: 'github', url: 'https://github.com/gyan-ripu/first-demo-project'
+                sh "mvn clean package"
             }
         }
     }
