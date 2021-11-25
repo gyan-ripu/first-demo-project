@@ -7,5 +7,11 @@ pipeline {
                 git credentialsId: 'github', url: 'https://github.com/gyan-ripu/first-demo-project'
             }
         }
+    stages {
+        stage('Maven Build') {
+            steps {
+                git credentialsId: 'github', url: 'https://github.com/gyan-ripu/first-demo-project'
+            }
+        }
     }
 }
